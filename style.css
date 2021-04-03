@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fafafa;
+}
+
+body.dark {
+  background-color: #292c35;
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.label {
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 50px;
+  position: relative;
+  padding: 5px;
+  height: 26px;
+  width: 50px;
+}
+
+.ball {
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 50%;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  bottom: 1px;
+  height: 22px;
+  width: 22px;
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+  background-color: #292c35;
+  transform: translateX(24px);
+}
+
+.checkbox:checked + .label.dark {
+  background-color: #292c35;
+  border: 1px solid #fff;
+}
+
+.checkbox:checked + .label.dark .ball {
+  background-color: #292c35;
+  border: 1px solid #fff;
+}
+
+svg {
+  height: 16px;
+  width: 16px;
+  fill: #f1c40f;
+}
